@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
-
 import { FiX } from 'react-icons/fi'
-import { DadosRestaurante, MenuItem } from '../../Components/CardRestaurant'
-import { Product } from '../../Components/Product'
+import { useParams } from 'react-router'
+import { DadosRestaurante, MenuItem } from '../../components/CardRestaurant'
+import { Product } from '../../components/Product'
 import { formatDescription } from '../../utils/formatters'
 import { Close, List, Modal, ModalContainer, ModalContent } from './styles'
 

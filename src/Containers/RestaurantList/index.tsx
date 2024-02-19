@@ -2,7 +2,7 @@ import React from 'react'
 import {
   CardRestaurant,
   DadosRestaurante,
-} from '../../Components/CardRestaurant'
+} from '../../components/CardRestaurant'
 import { Container, List } from './styles'
 
 type Props = {

@@ -1,7 +1,7 @@
 import React from 'react'
-import { DadosRestaurante } from '../../Components/CardRestaurant'
-import { Header } from '../../Components/Header'
-import { RestaurantList } from '../../Containers/RestaurantList'
+import { DadosRestaurante } from '../../components/CardRestaurant'
+import { Header } from '../../components/Header'
+import { RestaurantList } from '../../containers/RestaurantList'
 
 export const Home: React.FC = () => {
   const [restaurante, setRestaurante] = React.useState<DadosRestaurante[]>([])

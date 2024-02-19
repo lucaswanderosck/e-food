@@ -1,9 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { Banner } from '../../Components/Banner'
-import { DadosRestaurante } from '../../Components/CardRestaurant'
-import { HeaderRest } from '../../Components/HeaderRest'
-import { ProductList } from '../../Containers/ProductList'
+import { Banner } from '../../components/Banner'
+import { DadosRestaurante } from '../../components/CardRestaurant'
+import { HeaderRest } from '../../components/HeaderRest'
+import { ProductList } from '../../containers/ProductList'
 
 export const Restaurant: React.FC = () => {
   const { id } = useParams()

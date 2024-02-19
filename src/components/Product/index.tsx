@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  AddCart,
-  Container,
-  Description,
-  ProductImg,
-  Title
-} from './styles'
+import { AddCart, Container, Description, ProductImg, Title } from './styles'
 
 export type Props = {
   foto: string
