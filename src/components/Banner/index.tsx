@@ -1,14 +1,17 @@
 import React from 'react'
-import banner from '../../assets/images/banner.png'
-import { Category, Container, Title } from './styles'
+import { Container, Title, Type } from './styles'
 
-export const Banner: React.FC = () => {
-  return (
-    <Container style={{ backgroundImage: `url(${banner})` }}>
-      <div className="container">
-        <Category>Categoria do prato</Category>
-        <Title>Titulo do Prato</Title>
-      </div>
-    </Container>
-  )
+type Props = {
+  capa: string
+  tipo: string
+  titulo: string
 }
+
+export const Banner: React.FC<Props> = ({ capa, tipo, titulo }) => (
+  <Container style={{ backgroundImage: `url(${capa})` }}>
+    <div className="container">
+      <Type>{tipo}</Type>
+      <Title>{titulo}</Title>
+    </div>
+  </Container>
+)

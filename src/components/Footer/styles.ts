@@ -5,9 +5,10 @@ export const Container = styled.footer`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: ${({ theme }) => theme.colors['rose-300']};
+  background-color: ${({ theme }) => theme.peach};
   padding: 40px;
 `
+
 export const SocialLinks = styled.div`
   display: flex;
   gap: 8px;
@@ -15,18 +16,23 @@ export const SocialLinks = styled.div`
   line-height: 0;
 
   a {
-    background-color: ${({ theme }) => theme.colors['rose-700']};
-    color: ${({ theme }) => theme.colors['rose-100']};
+    background-color: ${({ theme }) => theme.coral};
+    color: ${({ theme }) => theme.cream};
     padding: 4px;
     border-radius: 50%;
   }
 `
 
-export const Logo = styled.img`
+export const Copy = styled.p`
+  max-width: 480px;
+  width: 100%;
+  font-size: 10px;
+  color: ${({ theme }) => theme.coral};
+`
+
+export const LogoFooter = styled.img`
+  width: 125px;
+  height: 57px;
   display: block;
   margin-bottom: 32px;
-`
-export const Description = styled.p`
-  font-size: 0.75rem;
-  color: ${({ theme }) => theme.colors['rose-700']};
 `

@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
+import { Footer } from './Components/Footer'
 import { Router } from './Router'
-import { Footer } from './components/Footer'
 import { GlobalStyles } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
 

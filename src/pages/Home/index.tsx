@@ -1,65 +1,23 @@
 import React from 'react'
-import fotoRestaurant from '../../assets/images/fotto-rastaurante.png'
-import { Header } from '../../components/Header'
-import { RestaurantsList } from '../../containers/RestaurantsList'
-import { Restaurant } from '../../models/Restaurant'
-
-const Restaurants: Restaurant[] = [
-  {
-    id: 1,
-    name: 'Restaurante 1',
-    rate: 4.5,
-    description: 'Comida boa e barata',
-    type: 'Comida Brasileira',
-    banner: fotoRestaurant,
-  },
-  {
-    id: 2,
-    name: 'Restaurante 2',
-    rate: 4.5,
-    description: 'Comida boa e barata',
-    type: 'Comida Brasileira',
-    banner: fotoRestaurant,
-  },
-  {
-    id: 3,
-    name: 'Restaurante 3',
-    rate: 4.5,
-    description: 'Comida boa e barata',
-    type: 'Comida Brasileira',
-    banner: fotoRestaurant,
-  },
-  {
-    id: 4,
-    name: 'Restaurante 4',
-    rate: 4.5,
-    description: 'Comida boa e barata',
-    type: 'Comida Brasileira',
-    banner: fotoRestaurant,
-  },
-  {
-    id: 5,
-    name: 'Restaurante 5',
-    rate: 4.5,
-    description: 'Comida boa e barata',
-    type: 'Comida Brasileira',
-    banner: fotoRestaurant,
-  },
-  {
-    id: 6,
-    name: 'Restaurante 6',
-    rate: 4.5,
-    description: 'Comida boa e barata',
-    type: 'Comida Brasileira',
-    banner: fotoRestaurant,
-  },
-]
+import { DadosRestaurante } from '../../Components/CardRestaurant'
+import { Header } from '../../Components/Header'
+import { RestaurantList } from '../../Containers/RestaurantList'
 
 export const Home: React.FC = () => {
+  const [restaurante, setRestaurante] = React.useState<DadosRestaurante[]>([])
+
+  // https://fake-api-tau.vercel.app/api/efood/restaurantes
+
+  React.useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setRestaurante(res))
+  }, [])
+
   return (
     <>
       <Header />
-      <RestaurantsList restaurants={Restaurants} />
+      <RestaurantList restaurants={restaurante} />
     </>
   )
 }

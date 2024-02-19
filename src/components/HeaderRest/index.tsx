@@ -1,18 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
-import { CartButton, Container, LinkHome } from './styles'
+import { Cart, Container, Logo } from './styles'
 
-export const HeaderRest: React.FC = () => {
-  return (
-    <Container>
-      <div className="container">
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <LinkHome>Restaurantes</LinkHome>
-        </Link>
-        <img src={logo} alt="" />
-        <CartButton>0 produto(s) no carrinho</CartButton>
-      </div>
-    </Container>
-  )
-}
+export const HeaderRest: React.FC = () => (
+  <Container>
+    <div className="container">
+      <Link to="/">
+        <span
+          style={{
+            color: '#E66767',
+          }}
+        >
+          Restaurantes
+        </span>
+      </Link>
+      <Logo src={logo} />
+      <Cart>0 produto(s) no carrinho</Cart>
+    </div>
+  </Container>
+)

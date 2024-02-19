@@ -1,8 +1,6 @@
 export const defaultTheme = {
-  colors: {
-    white: '#FFF',
-    'rose-100': '#FFF8F2',
-    'rose-300': '#FFEBD9',
-    'rose-700': '#E66767',
-  },
+  coral: '#E66767',
+  peach: '#FFEBD9',
+  cream: '#FFF8F2',
+  white: '#FFFFFF',
 }

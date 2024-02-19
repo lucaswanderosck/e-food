@@ -5,21 +5,26 @@ export const Container = styled.header`
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
-  height: 24rem;
+  height: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  padding: 40px 0;
+  justify-content: space-between;
 `
 
 export const Title = styled.h2`
-  font-size: 2.25rem;
-  font-weight: bold;
-  line-height: 2.625rem;
-  color: ${({ theme }) => theme.colors['rose-700']};
-  max-width: 35rem;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+  color: ${({ theme }) => theme.coral};
+  max-width: 539px;
   width: 100%;
   text-align: center;
+
+  @media (max-width: 615px) {
+    font-size: 24px;
+  }
 `
 
 export const Logo = styled.img`

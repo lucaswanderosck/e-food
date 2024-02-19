@@ -5,11 +5,14 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors['rose-100']};
+    background-color: ${({ theme }) => theme.cream};
     -webkit-font-smoothing: antialiased;
+    
   }
 
     body, input, button {
