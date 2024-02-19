@@ -1,7 +1,7 @@
 import React from 'react'
 import { AddCart, Container, Description, ProductImg, Title } from './styles'
 
-export type Props = {
+export interface Props {
   foto: string
   nome: string
   descricao: string

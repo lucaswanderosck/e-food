@@ -5,7 +5,7 @@ import {
 } from '../../components/CardRestaurant'
 import { Container, List } from './styles'
 
-type Props = {
+interface Props {
   restaurants: DadosRestaurante[]
 }
 

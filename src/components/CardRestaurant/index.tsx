@@ -22,7 +22,7 @@ export interface MenuItem {
   porcao: string
 }
 
-export type DadosRestaurante = {
+export interface DadosRestaurante {
   id: number
   titulo: string
   destacado?: boolean

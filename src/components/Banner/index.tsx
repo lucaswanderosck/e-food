@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Title, Type } from './styles'
 
-type Props = {
+interface Props {
   capa: string
   tipo: string
   titulo: string

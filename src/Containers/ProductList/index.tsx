@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FiX } from 'react-icons/fi'
 import { useParams } from 'react-router'
 import { DadosRestaurante, MenuItem } from '../../components/CardRestaurant'
@@ -6,20 +6,20 @@ import { Product } from '../../components/Product'
 import { formatDescription } from '../../utils/formatters'
 import { Close, List, Modal, ModalContainer, ModalContent } from './styles'
 
-type ModalState = {
+interface ModalState {
   isVisible: boolean
 }
 
 export const ProductList: React.FC = () => {
   const { id } = useParams()
 
-  const [currentRest, setCurrentRest] = useState<DadosRestaurante>()
-  const [modal, setModal] = useState<ModalState>({
+  const [currentRest, setCurrentRest] = React.useState<DadosRestaurante>()
+  const [modal, setModal] = React.useState<ModalState>({
     isVisible: false,
   })
-  const [selectedProduct, setSelectedProduct] = useState<MenuItem>()
+  const [selectedProduct, setSelectedProduct] = React.useState<MenuItem>()
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
       .then((res) => res.json())
       .then((res) => setCurrentRest(res))
