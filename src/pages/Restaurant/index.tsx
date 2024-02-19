@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import { Banner } from '../../components/Banner'
 import { DadosRestaurante } from '../../components/CardRestaurant'
 import { HeaderRest } from '../../components/HeaderRest'
-import { ProductList } from '../../containers/ProductList'
+import { ProductList } from '../../container/ProductList'
 
 export const Restaurant: React.FC = () => {
   const { id } = useParams()
