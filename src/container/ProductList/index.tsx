@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiX } from 'react-icons/fi'
+import { TfiClose } from 'react-icons/tfi'
 import { useParams } from 'react-router'
 import { DadosRestaurante, MenuItem } from '../../components/CardRestaurant'
 import { Product } from '../../components/Product'
@@ -75,7 +75,7 @@ export const ProductList: React.FC = () => {
                 })
               }}
             >
-              <FiX />
+              <TfiClose color="#fff" />
             </Close>
           </ModalContent>
           <div
