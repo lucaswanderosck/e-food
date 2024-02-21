@@ -1,6 +1,7 @@
 import React from 'react'
-import { BsFillStarFill } from 'react-icons/bs'
+import { PiStarFill } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
+import { formatDescriptionCardRestaurant } from '../../utils/formatters'
 import {
   Button,
   Card,
@@ -48,11 +49,11 @@ export const CardRestaurant: React.FC<DadosRestaurante> = ({
         <TitleCard>
           <Title>{titulo}</Title>
           <Rate>
-            <span>{avaliacao}</span>
-            <BsFillStarFill color="#F2C94C" />
+            <p>{avaliacao}</p>
+            <PiStarFill color="#FFB930" size={24} />
           </Rate>
         </TitleCard>
-        <Description>{descricao}</Description>
+        <Description>{formatDescriptionCardRestaurant(descricao)}</Description>
         <Link to={`/restaurant/${id}`}>
           {' '}
           <Button>Saiba mais</Button>{' '}

@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.li`
   max-width: 472px;
   width: 100%;
-  height: 398px;
+  max-height: 398px;
+  height: 100%;
   position: relative;
 `
 
@@ -59,9 +60,14 @@ export const Tag = styled.span`
 `
 
 export const Rate = styled.div`
+  width: 55px;
+  height: 21px;
   display: flex;
   align-items: center;
-  gap: 4px;
-  line-height: 0;
+  justify-content: space-between;
   font-weight: bold;
+
+  p {
+    font-size: 18px;
+  }
 `

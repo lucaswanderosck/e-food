@@ -62,7 +62,7 @@ export const ProductList: React.FC = () => {
                 <h4>{selectedProduct.nome}</h4>
 
                 <p>{selectedProduct.descricao}</p>
-                <span>{selectedProduct.porcao}</span>
+                <span>Serve: de {selectedProduct.porcao}</span>
                 <button>
                   Adicionar ao carrinho {`- R$ ${selectedProduct.preco}0`}
                 </button>
