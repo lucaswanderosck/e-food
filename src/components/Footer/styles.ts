@@ -6,19 +6,19 @@ export const Container = styled.footer`
   align-items: center;
   text-align: center;
   background-color: ${({ theme }) => theme.peach};
-  padding: 40px;
+  padding: 2.5rem;
 `
 
 export const SocialLinks = styled.div`
   display: flex;
-  gap: 8px;
-  margin-bottom: 80px;
+  gap: 0.5rem;
+  margin-bottom: 5rem;
   line-height: 0;
 
   a {
     background-color: ${({ theme }) => theme.coral};
     color: ${({ theme }) => theme.cream};
-    padding: 4px;
+    padding: 0.25rem;
     border-radius: 50%;
   }
 `
@@ -34,5 +34,5 @@ export const LogoFooter = styled.img`
   width: 125px;
   height: 57px;
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 `

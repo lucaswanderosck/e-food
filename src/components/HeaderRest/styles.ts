@@ -9,7 +9,7 @@ export const Container = styled.header`
   background-position: center;
   background-repeat: no-repeat;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 1.125rem;
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.coral};

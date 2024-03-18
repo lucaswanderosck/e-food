@@ -14,18 +14,18 @@ export const RestaurantBanner = styled.img`
   display: block;
 `
 export const Title = styled.h3`
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
 `
 
 export const Description = styled.p`
-  font-size: 14px;
-  margin-bottom: 16px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
   color: ${({ theme }) => theme.coral};
 `
 
 export const Button = styled.a`
-  font-size: 14px;
+  font-size: 0.875rem;
   background-color: ${({ theme }) => theme.coral};
   padding: 4px 6px;
   color: ${({ theme }) => theme.peach};
@@ -35,7 +35,7 @@ export const Button = styled.a`
 `
 
 export const Card = styled.div`
-  padding: 8px;
+  padding: 0.5rem;
   background-color: ${({ theme }) => theme.white};
   border: 1px solid ${({ theme }) => theme.coral};
   border-top: none;
@@ -43,7 +43,7 @@ export const Card = styled.div`
 
 export const TitleCard = styled.div`
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   justify-content: space-between;
   color: ${({ theme }) => theme.coral};
 `
@@ -55,8 +55,8 @@ export const Tag = styled.span`
   padding: 6px 4px;
   display: block;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 1rem;
+  right: 1rem;
 `
 
 export const Rate = styled.div`

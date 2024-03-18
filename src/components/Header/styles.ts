@@ -9,7 +9,7 @@ export const Container = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  padding: 2.5rem 0;
   justify-content: space-between;
 `
 
@@ -23,7 +23,7 @@ export const Title = styled.h2`
   text-align: center;
 
   @media (max-width: 615px) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 `
 

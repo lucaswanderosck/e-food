@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 56px;
+  margin-bottom: 3.5rem;
 
   &::after {
     content: '';
@@ -20,7 +20,7 @@ export const Container = styled.div`
   }
 
   > div {
-    padding: 24px 0;
+    padding: 1.5rem 0;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -30,14 +30,14 @@ export const Container = styled.div`
 
 export const Type = styled.span`
   font-weight: 100;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 2rem;
+  line-height: 1.6;
   color: ${({ theme }) => theme.white};
 `
 
 export const Title = styled.h2`
   font-weight: 900;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 2rem;
+  line-height: 1.6;
   color: ${({ theme }) => theme.white};
 `

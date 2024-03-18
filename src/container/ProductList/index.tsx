@@ -2,7 +2,7 @@ import React from 'react'
 import { TfiClose } from 'react-icons/tfi'
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router'
-import { DadosRestaurante, MenuItem } from '../../components/CardRestaurant'
+import { MenuI, RestauranteI } from '../../components/CardRestaurant'
 import { Product } from '../../components/Product'
 import { add, open } from '../../store/reducers/cart'
 import { formatDescription } from '../../utils/formatters'
@@ -15,11 +15,11 @@ type ModalState = {
 export const ProductList: React.FC = () => {
   const { id } = useParams()
 
-  const [currentRest, setCurrentRest] = React.useState<DadosRestaurante>()
+  const [currentRest, setCurrentRest] = React.useState<RestauranteI>()
   const [modal, setModal] = React.useState<ModalState>({
     isVisible: false,
   })
-  const [selectedProduct, setSelectedProduct] = React.useState<MenuItem>()
+  const [selectedProduct, setSelectedProduct] = React.useState<MenuI>()
 
   const dispatch = useDispatch()
 
@@ -38,12 +38,11 @@ export const ProductList: React.FC = () => {
     return <h3>Carregando...</h3>
   }
 
-  const openModal = (product: MenuItem) => {
+  const openModal = (product: MenuI) => {
     setSelectedProduct(product)
     setModal({
       isVisible: true,
     })
-    console.log([product])
   }
 
   return (

@@ -6,14 +6,12 @@ import { useGetRestaurantsQuery } from '../../services/api'
 export const Home: React.FC = () => {
   const { data: restaurante, isLoading } = useGetRestaurantsQuery()
 
-  if (restaurante) {
-    return (
-      <>
-        <Header />
-        <RestaurantList restaurants={restaurante}></RestaurantList>
-      </>
-    )
-  }
+  if (!restaurante || isLoading) return <p>Carregando...</p>
 
-  return <h3>Carregando...</h3>
+  return (
+    <>
+      <Header />
+      <RestaurantList restaurants={restaurante}></RestaurantList>
+    </>
+  )
 }

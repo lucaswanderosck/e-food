@@ -1,30 +1,30 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 8px;
+  padding: 0.5rem;
   background-color: ${({ theme }) => theme.coral};
-  width: 320px;
-  height: 339px;
+  width: 20rem;
+  height: 21.1875rem;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 `
 export const ProductImg = styled.img`
-  width: 304px;
-  height: 167px;
+  width: 19rem;
+  height: 10.4375rem;
   display: block;
 `
 export const Title = styled.h3`
   font-weight: 900;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: ${({ theme }) => theme.cream};
 `
 
 export const Description = styled.p`
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   color: ${({ theme }) => theme.cream};
 `
 
@@ -34,7 +34,7 @@ export const AddCart = styled.button`
   font-weight: bold;
   width: 100%;
   border: none;
-  padding: 4px;
+  padding: 0.25rem;
   display: block;
   cursor: pointer;
 `

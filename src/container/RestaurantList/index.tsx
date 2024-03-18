@@ -1,12 +1,9 @@
 import React from 'react'
-import {
-  CardRestaurant,
-  DadosRestaurante,
-} from '../../components/CardRestaurant'
+import { CardRestaurant, RestauranteI } from '../../components/CardRestaurant'
 import { Container, List } from './styles'
 
 interface Props {
-  restaurants: DadosRestaurante[]
+  restaurants: RestauranteI[]
 }
 
 export const RestaurantList: React.FC<Props> = ({ restaurants }) => (

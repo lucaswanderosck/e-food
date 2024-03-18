@@ -1,20 +1,18 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { DadosRestaurante } from '../components/CardRestaurant'
+import { RestauranteI } from '../components/CardRestaurant'
 
-const api = createApi({
+export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://fake-api-tau.vercel.app/api/efood',
   }),
   endpoints: (builder) => ({
-    getRestaurants: builder.query<DadosRestaurante[], void>({
+    getRestaurants: builder.query<RestauranteI[], void>({
       query: () => 'restaurantes',
     }),
-    getCurrentRest: builder.query<DadosRestaurante, string>({
+    getCurrentRest: builder.query<RestauranteI, string>({
       query: (id) => `restaurantes/${id}`,
     }),
   }),
 })
 
 export const { useGetRestaurantsQuery, useGetCurrentRestQuery } = api
-
-export default api

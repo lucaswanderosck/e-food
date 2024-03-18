@@ -4,8 +4,8 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  row-gap: 32px;
-  column-gap: 32px;
+  row-gap: 2rem;
+  column-gap: 2rem;
   margin-bottom: 120px;
 `
 export const Modal = styled.div`
@@ -38,13 +38,13 @@ export const ModalContent = styled.div`
   width: 1024px;
   height: 344px;
   background-color: ${({ theme }) => theme.coral};
-  padding: 32px;
+  padding: 2rem;
   color: ${({ theme }) => theme.peach};
   position: relative;
 `
 export const ModalContainer = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 1.25rem;
 
   > img {
     width: 280px;
@@ -53,18 +53,18 @@ export const ModalContainer = styled.div`
   }
 
   div h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: ${({ theme }) => theme.white};
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   div p,
   div span {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.6;
     color: ${({ theme }) => theme.white};
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   div button {
@@ -73,10 +73,9 @@ export const ModalContainer = styled.div`
     cursor: pointer;
     display: block;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.875rem;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 1rem;
     color: ${({ theme }) => theme.coral};
     background-color: ${({ theme }) => theme.peach};
   }

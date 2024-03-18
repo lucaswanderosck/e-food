@@ -14,7 +14,7 @@ import {
   TitleCard,
 } from './styles'
 
-export interface MenuItem {
+export interface MenuI {
   foto: string
   preco: number
   id: number
@@ -23,7 +23,7 @@ export interface MenuItem {
   porcao: string
 }
 
-export interface DadosRestaurante {
+export interface RestauranteI {
   id: number
   titulo: string
   destacado?: boolean
@@ -31,10 +31,10 @@ export interface DadosRestaurante {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio?: MenuItem[]
+  cardapio?: MenuI[]
 }
 
-export const CardRestaurant: React.FC<DadosRestaurante> = ({
+export const CardRestaurant: React.FC<RestauranteI> = ({
   id,
   titulo,
   tipo,
