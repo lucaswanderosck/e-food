@@ -1,12 +1,14 @@
 import React from 'react'
 import { TfiClose } from 'react-icons/tfi'
+import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router'
 import { DadosRestaurante, MenuItem } from '../../components/CardRestaurant'
 import { Product } from '../../components/Product'
+import { add, open } from '../../store/reducers/cart'
 import { formatDescription } from '../../utils/formatters'
 import { Close, List, Modal, ModalContainer, ModalContent } from './styles'
 
-interface ModalState {
+type ModalState = {
   isVisible: boolean
 }
 
@@ -18,6 +20,13 @@ export const ProductList: React.FC = () => {
     isVisible: false,
   })
   const [selectedProduct, setSelectedProduct] = React.useState<MenuItem>()
+
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(selectedProduct!))
+    dispatch(open())
+  }
 
   React.useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
@@ -62,9 +71,9 @@ export const ProductList: React.FC = () => {
                 <h4>{selectedProduct.nome}</h4>
 
                 <p>{selectedProduct.descricao}</p>
-                <span>Serve: de {selectedProduct.porcao}</span>
-                <button>
-                  Adicionar ao carrinho {`- R$ ${selectedProduct.preco}0`}
+                <span>{selectedProduct.porcao}</span>
+                <button onClick={addToCart}>
+                  Adicionar ao carrinho {`R$ ${selectedProduct.preco}0`}
                 </button>
               </div>
             </ModalContainer>
@@ -85,7 +94,7 @@ export const ProductList: React.FC = () => {
                 isVisible: false,
               })
             }}
-          />
+          ></div>
         </Modal>
       )}
     </>

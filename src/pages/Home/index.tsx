@@ -1,23 +1,19 @@
 import React from 'react'
-import { DadosRestaurante } from '../../components/CardRestaurant'
 import { Header } from '../../components/Header'
 import { RestaurantList } from '../../container/RestaurantList'
+import { useGetRestaurantsQuery } from '../../services/api'
 
 export const Home: React.FC = () => {
-  const [restaurante, setRestaurante] = React.useState<DadosRestaurante[]>([])
+  const { data: restaurante, isLoading } = useGetRestaurantsQuery()
 
-  // https://fake-api-tau.vercel.app/api/efood/restaurantes
+  if (restaurante) {
+    return (
+      <>
+        <Header />
+        <RestaurantList restaurants={restaurante}></RestaurantList>
+      </>
+    )
+  }
 
-  React.useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setRestaurante(res))
-  }, [])
-
-  return (
-    <>
-      <Header />
-      <RestaurantList restaurants={restaurante} />
-    </>
-  )
+  return <h3>Carregando...</h3>
 }
