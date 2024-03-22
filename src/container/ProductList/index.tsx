@@ -8,7 +8,7 @@ import { add, open } from '../../store/reducers/cart'
 import { formatDescription } from '../../utils/formatters'
 import { Close, List, Modal, ModalContainer, ModalContent } from './styles'
 
-type ModalState = {
+interface ModalState {
   isVisible: boolean
 }
 

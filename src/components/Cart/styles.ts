@@ -21,8 +21,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.5);
 `
 
 export const Sidebar = styled.aside`
@@ -39,6 +38,62 @@ export const Sidebar = styled.aside`
     display: flex;
     justify-content: center;
   }
+
+  &.is-closed {
+    display: none;
+  }
+
+  label {
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: ${({ theme }) => theme.peach};
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    background-color: ${({ theme }) => theme.peach};
+    height: 2rem;
+    padding: 0.5rem;
+    border: none;
+    outline: 2px solid transparent;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: black;
+
+    &.error {
+      outline: 2px solid red;
+      color: red;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: ${({ theme }) => theme.peach};
+    margin-bottom: 1rem;
+  }
+`
+export const Title = styled.h3`
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: ${({ theme }) => theme.peach};
+  margin-bottom: 1rem;
+`
+
+export const InputGroup = styled.div`
+  display: flex;
+  gap: 2rem;
+
+  #cardNumber {
+    width: 22.5rem;
+  }
 `
 
 export const Prices = styled.p`
@@ -49,6 +104,7 @@ export const Prices = styled.p`
   font-size: 0.875rem;
   color: ${({ theme }) => theme.peach};
 `
+
 export const CartItem = styled.li`
   margin-bottom: 1rem;
   display: flex;
@@ -89,7 +145,6 @@ export const CartItem = styled.li`
 `
 
 export const Button = styled.button`
-  margin-top: 1rem;
   width: 100%;
   padding: 0.25rem;
   border: none;
@@ -98,4 +153,13 @@ export const Button = styled.button`
   font-weight: bold;
   font-size: 0.875rem;
   cursor: pointer;
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 `
