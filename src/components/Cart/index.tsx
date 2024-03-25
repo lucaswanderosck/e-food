@@ -45,6 +45,8 @@ export const Cart: React.FC = () => {
     }, 0)
   }
 
+  console.log(emptyCart)
+
   const form = useFormik({
     initialValues: {
       fullName: '',
