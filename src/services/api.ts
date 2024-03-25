@@ -31,6 +31,10 @@ export interface PurchasePayload {
   }
 }
 
+type PurchaseResponse = {
+  orderId: string
+}
+
 export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://fake-api-tau.vercel.app/api/efood',
@@ -42,7 +46,7 @@ export const api = createApi({
     getCurrentRest: builder.query<RestauranteI, string>({
       query: (id) => `restaurantes/${id}`,
     }),
-    purchase: builder.mutation<void, PurchasePayload>({
+    purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
       query: (body) => ({
         url: 'checkout',
         method: 'POST',

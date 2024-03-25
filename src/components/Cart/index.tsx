@@ -27,7 +27,6 @@ export const Cart: React.FC = () => {
   const [purchaseData, setPurchaseData] = React.useState(false)
   const [paymentData, setPaymentData] = React.useState(false)
   const [checkout, setCheckout] = React.useState(false)
-  const [emptyCart, setEmptyCart] = React.useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -44,8 +43,6 @@ export const Cart: React.FC = () => {
       return (acc += valorAtual.preco)
     }, 0)
   }
-
-  console.log(emptyCart)
 
   const form = useFormik({
     initialValues: {
@@ -183,7 +180,6 @@ export const Cart: React.FC = () => {
     setCart(true)
     setCheckout(false)
     closeCart()
-    setEmptyCart(false)
     navigate('/')
   }
 
@@ -387,8 +383,8 @@ export const Cart: React.FC = () => {
       </Sidebar>
       {isSuccess ? (
         <Sidebar className={checkout ? '' : 'is-closed'}>
-          {isLoading ? <p>Processando pagamento...</p> : ''}
-          <Title>Pedido realizado - {data.orderId}</Title>
+          {isLoading && <p>Carregando...</p>}
+          <Title>Pedido realizado - {data?.orderId}</Title>
           <p>
             Estamos felizes em informar que seu pedido já está em processo de
             preparação e, em breve, será entregue no endereço fornecido.
